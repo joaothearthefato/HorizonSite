@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+*{
+    margin:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+   background:linear-gradient(135deg, #000000, #2c3e50);
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}
+
+/* ================= CONTAINER ================= */
+
+.container{
+    width:420px;
+    padding:45px;
+    border-radius:30px;
+
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(25px);
+    -webkit-backdrop-filter:blur(25px);
+
+    border:1px solid rgba(255,255,255,0.25);
+
+    box-shadow:
+        0 30px 60px rgba(0,0,0,0.35),
+        inset 0 0 40px rgba(255,255,255,0.05);
+
+    transition:0.4s ease;
+}
+
+.container:hover{
+    transform:translateY(-6px);
+    box-shadow:
+        0 40px 80px rgba(0,0,0,0.4),
+        inset 0 0 60px rgba(255,255,255,0.08);
+}
+
+/* ================= TEXT ================= */
+
+.container h1{
+    color:#ffffff;
+    font-size:24px;
+    margin-bottom:10px;
+    font-weight:600;
+}
+
+.container p{
+    color:rgba(255,255,255,0.85);
+    font-size:14px;
+    margin-bottom:30px;
+}
+
+/* ================= FORM ================= */
+
+.hero-placeholder{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.hero-placeholder input{
+    padding:15px 20px;
+    border-radius:35px;
+    border:2px solid rgba(255,255,255,0.6);
+
+    background:rgba(255,255,255,0.07);
+    outline:none;
+    font-size:14px;
+    color:white;
+
+    transition:0.3s ease;
+}
+
+.hero-placeholder input::placeholder{
+    color:rgba(255,255,255,0.7);
+}
+
+.hero-placeholder input:hover{
+    transform:scale(1.05);
+}
+
+.hero-placeholder input:focus{
+    background:rgba(255,255,255,0.15);
+    border-color:#ffffff;
+    box-shadow:0 0 20px rgba(255,255,255,0.4);
+}
+
+/* ================= BUTTON ================= */
+
+.hero-placeholder button{
+    padding:15px;
+    border:none;
+    border-radius:35px;
+
+    background:linear-gradient(135deg,#ffffff,#dcdcdc);
+    color:#000;
+    font-weight:600;
+    cursor:pointer;
+
+    transition:0.3s ease;
+}
+
+.hero-placeholder button:hover{
+    background:linear-gradient(135deg,#4CAF50,#66bb6a);
+    color:white;
+    transform:scale(1.06);
+}
+
+.hero-placeholder button:active{
+    transform:scale(0.97);
+}
+
+/* ================= VOLTAR LOGIN ================= */
+
+.back-link{
+    display:block;
+    margin-top:20px;
+    text-align:center;
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    opacity:0.85;
+    transition:0.3s ease;
+}
+
+.back-link:hover{
+    opacity:1;
+    transform:scale(1.05);
+    text-decoration:underline;
+}

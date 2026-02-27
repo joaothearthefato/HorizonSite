@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(135deg, #000000, #2c3e50);
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    overflow:hidden;
+}
+
+/* ================= CONTAINER ================= */
+
+.container{
+    width:900px;
+    height:520px;
+    display:flex;
+    border-radius:30px;
+
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(25px);
+    -webkit-backdrop-filter:blur(25px);
+
+    border:1px solid rgba(255,255,255,0.25);
+
+    box-shadow:
+        0 30px 60px rgba(0,0,0,0.35),
+        inset 0 0 40px rgba(255,255,255,0.05);
+
+    transition:0.4s ease;
+    transform-style:preserve-3d;
+}
+
+/* ================= LEFT IMAGE ================= */
+
+.left{
+    width:50%;
+    background:url("../img/foguete.png") center/cover no-repeat;
+    border-top-left-radius:30px;
+    border-bottom-left-radius:30px;
+}
+
+/* ================= RIGHT SIDE ================= */
+
+.right{
+    width:50%;
+    padding:60px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.right h1{
+    color:#ffffff;
+    margin-bottom:25px;
+    font-weight:600;
+    letter-spacing:1px;
+}
+
+/* SOCIAL */
+
+.social{
+    display:flex;
+    gap:15px;
+    margin-bottom:30px;
+}
+
+.circle{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.3);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    transition:0.3s ease;
+}
+
+.circle:hover{
+    transform:scale(1.1);
+    background:rgba(255,255,255,0.2);
+}
+
+/* INPUTS */
+
+.input-group{
+    position:relative;
+    width:100%;
+    margin-bottom:20px;
+    transition:0.3s ease;
+}
+.input-group i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: rgba(178, 178, 178, 0.9);
+    pointer-events: none; /* importante */
+}
+
+.input-group:hover{
+    transform:scale(1.05);
+}
+
+.input-group input{
+    width:100%;
+    padding:15px 50px 15px 20px;
+    border-radius:35px;
+    border:2px solid rgba(255,255,255,0.6);
+
+    background:rgba(255,255,255,0.07);
+    outline:none;
+    font-size:14px;
+    color:white;
+
+    transition:0.3s ease;
+}
+
+.input-group input::placeholder{
+    color:rgba(255,255,255,0.7);
+}
+
+.input-group input:focus{
+    background:rgba(255,255,255,0.15);
+    border-color:#ffffff;
+    box-shadow:0 0 20px rgba(255,255,255,0.4);
+}
+
+/* BOTÃO */
+
+.btn{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:35px;
+
+    background:linear-gradient(135deg,#ffffff,#dcdcdc);
+    color:#000;
+    font-weight:600;
+    cursor:pointer;
+
+    transition:0.3s ease;
+}
+
+.btn:hover{
+    background:linear-gradient(135deg,#4CAF50,#66bb6a);
+    color:white;
+    transform:scale(1.06);
+    box-shadow:0 15px 35px rgba(76,175,80,0.5);
+}
+
+.btn:active{
+    transform:scale(0.97);
+}
+
+/* LOGIN LINK */
+
+.login{
+    margin-top:20px;
+    font-size:14px;
+    color:white;
+}
+
+.login a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.login a:hover{
+    text-decoration:underline;
+}
