@@ -1,22 +1,56 @@
 <?php
 session_start();
+$conn = new mysqli("localhost","root","","saep_db");
 
-// Proteção da página
-if (!isset($_SESSION['usuario_id'])) {
-    header("Location: login.php");
-    exit;
+if(isset($_POST['email'])){
+
+$email = $_POST['email'];
+$senha = $_POST['senha'];
+
+$sql = "SELECT * FROM usuarios WHERE email='$email' AND senha='$senha'";
+$result = $conn->query($sql);
+
+if($result->num_rows > 0){
+
+$usuario = $result->fetch_assoc();
+$_SESSION['usuario'] = $usuario['nome'];
+
+header("Location: dashboard.php");
+
+}else{
+
+echo "Login inválido<br>";
+}
+
 }
 ?>
-<!DOCTYPE html>
+
 <html>
+
 <head>
-    <title>Dashboard</title>
+<title>Login</title>
 </head>
+
 <body>
 
-<h1>Bem-vindo, <?php echo $_SESSION['usuario_nome']; ?> 🚀</h1>
+<h2>Login do Sistema Financeiro</h2>
 
-<a href="logout.php">Sair</a>
+<form method="POST">
+
+Email:<br>
+<input type="email" name="email">
+
+<br><br>
+
+Senha:<br>
+<input type="password" name="senha">
+
+<br><br>
+
+<input type="submit" value="Entrar">
+
+</form>
 
 </body>
+
 </html>
