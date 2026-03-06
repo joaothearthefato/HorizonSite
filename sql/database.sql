@@ -1,11 +1,11 @@
-CREATE DATABASE login_simples;
+use horizon_db;
 
-USE login_simples;
 
-CREATE TABLE usuarios (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(100) NOT NULL,
-    email VARCHAR(150) NOT NULL UNIQUE,
-    senha VARCHAR(255) NOT NULL,
-    criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+create table usuarios (
+id int not null auto_increment primary key,
+nome varchar(255) NOT NULL,
+email varchar(255) not null unique,
+senha varchar(255) not null
+)
+
+select * from usuarios;
