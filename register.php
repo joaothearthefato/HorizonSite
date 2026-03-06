@@ -44,16 +44,5 @@
     </div>
 
 </div>
-
-<script>
-const container = document.getElementById('container');
-
-document.addEventListener('mousemove', (e) => {
-    let x = (window.innerWidth / 2 - e.pageX) / 40;
-    let y = (window.innerHeight / 2 - e.pageY) / 40;
-    container.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
-});
-</script>
-
 </body>
 </html>
